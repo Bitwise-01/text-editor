@@ -1,4 +1,2 @@
-A simple rich text editor
-
-### Why?
-I needed a free rich text editor for a project I was working on, but couldn't find any.
+A simple rich text editor.<br>
+I was just curious about how rich text editors worked.

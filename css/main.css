@@ -21,16 +21,16 @@ body {
 #buttons > button {
     border: none;
     outline: none;
-    color: #fff;
+    color: #000;
     font-size: 16px;
     border-radius: 5%;
     background-color: transparent;
     font-family: 'Times New Roman', Times, serif;
 }
 
-#buttons > button:hover {
-    color: #333;
+#buttons > button:hover, .img-icon:hover {
     cursor: pointer;
+    background-color: #fff;
 }
 
 #editor {
@@ -49,6 +49,7 @@ body {
     height: 25px;
     cursor: pointer;
     margin-left: 2px;
+    border-radius: 10%;
     margin-bottom: -8px;
 }
 
@@ -56,14 +57,14 @@ input[type="color"]:first-of-type {
     margin-left: 10px;
 }
 
-input[type="color"] {
+input[type="color"], select {
     border: none;
     height: 20px;
     outline: none;
     border-radius: 2px;
 }
 
-input[type="color"]:hover, #fonts, #font-size {
+input[type="color"]:hover, #fonts, #font-size, #font-format {
     cursor: pointer;
 }
 
@@ -74,4 +75,9 @@ input[type="color"]:hover, #fonts, #font-size {
 #font-size {
     width: 50px;
     font-size: 14px;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
 }
