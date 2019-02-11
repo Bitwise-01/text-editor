@@ -1,4 +1,4 @@
 A simple rich text editor
 
 ### Why?
-I need a rich text editor for a project I'm working on, but I'm too broke to afford one
+I needed a free rich text editor for a project I was working on, but couldn't find any.
