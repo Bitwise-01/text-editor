@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    <script src="text.js" defer></script>
+</head>
+<body>
+    
+    <div id="text-editor">
+
+        <!-- Buttons -->
+        <div id="buttons">
+            <button type="button" title="Bold" onclick="execute('bold')"><b>B</b></button>
+            <button type="button" title="Italic" onclick="execute('italic')"><em><b>I</b></em></button>
+            <button type="button" title="Underline" onclick="execute('underline')"><u><b>U</b></u></button>
+
+            <img src="img/left-align.png" class="img-icon" title="Left align" onclick="execute('justifyleft')">
+            <img src="img/center-align.png" class="img-icon" title="Center align" onclick="execute('justifycenter')">
+            <img src="img/right-align.png" class="img-icon" title="Right align" onclick="execute('justifyright')">
+                        
+            <input type="color" value="#ffffff" title="Text color" onchange="execute('forecolor', this.value)">
+            <input type="color" value="#111111" title="Background color" onchange="execute('backcolor', this.value)">
+
+            <!-- Fonts -->
+            <select id="fonts" onchange="execute('fontname', this.options[this.selectedIndex].value)" title="Fonts">
+                <option value="Helvetica">Helvetica</option>
+                <option value="Times New Roman" selected>Times New Roman</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Lucida Console">Lucida Console</option>
+            </select>
+
+            <!-- Font size -->
+            <select id="font-size" oninput="execute('fontsize', this.options[this.selectedIndex].value)" title="Font size">
+                <script>
+                    for (let n=1; n<=7; n++) {
+                        document.write(`<option value="${n}">${n}</option>`);
+                    }
+                </script>
+            </select>
+
+
+
+
+
+        </div>
+
+        <!-- Rich text editor -->
+        <div id="editor" contenteditable="true"></div>
+
+    </div>
+
+</body>
+</html>
