@@ -13,18 +13,6 @@ function execute(cmd, value) {
     textEditor.focus();
 }
 
-function printDoc() {
-    let body = document.getElementsByTagName('body')[0];
-
-    let restorepage = body.innerHTML;
-    let printcontent = textEditor.innerHTML;
-
-    body.innerHTML = printcontent;
-
-    window.print();
-    body.innerHTML = restorepage;
-}
-
 function renderFonts() {
     let fontsTag = document.getElementById('fonts');
 
